@@ -96,6 +96,9 @@
   .dlg-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
 
   @media (max-width:900px){
+    /* 아이폰 사파리: 16px 미만 입력칸을 누르면 화면이 자동 확대되어 오른쪽이 잘려 보이므로 16px로 고정 */
+    .inp,.item .inp,textarea.inp,dialog .inp{font-size:16px}
+    html,body{max-width:100%;overflow-x:clip}
     header h1{font-size:16px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .hbtns{flex-shrink:0}
     .layout{grid-template-columns:1fr;padding:12px 12px 90px}
