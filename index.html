@@ -30,6 +30,11 @@
   .field>label{display:block;font-size:12.5px;color:var(--muted);margin-bottom:5px}
   .inp{display:block;width:100%;border:1px solid var(--line);border-radius:7px;padding:9px 11px;background:#fff;font-size:15px;outline:none}
   .inp:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .inp{min-height:42px}
+  /* iOS 사파리: 날짜칸이 기본 모양·가운데 정렬·낮은 높이로 나오는 문제 보정 */
+  input[type="date"].inp{-webkit-appearance:none;appearance:none;display:flex;align-items:center;text-align:left;background:#fff;color:var(--text);line-height:1.2}
+  input[type="date"].inp::-webkit-date-and-time-value{text-align:left;min-height:1.2em;margin:0}
+  input[type="date"].inp::-webkit-calendar-picker-indicator{opacity:.6}
   textarea.inp{min-height:76px;resize:vertical}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);border-radius:8px;padding:9px 14px;background:#fff;cursor:pointer;font-size:14px;line-height:1.2;white-space:nowrap}
